@@ -4,7 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Pokédex</title>
+    <!-- Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet" />
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Elements CSS -->
+    <link rel="stylesheet" href="~/lib/tailwind/index.min.css" />
+    <!-- Custom styles -->
+    <style></style>
     <script>
         tailwind.config = {
                 theme: {
@@ -16,9 +24,11 @@
             }
         }
     </script>
+    <!-- Extra CSS -->
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Pokédex.styles.css" asp-append-version="true" />
 </head>
+<!-- Site -->
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -52,6 +62,9 @@
             &copy; 2023 - Pokédex - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+    <!-- Tailwind Elements JS -->
+    <script type="text/javascript" src="js/index.min.js"></script>
+    <!-- Extra JS -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
