@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Pokédex.Database;
+using Pokédex.Models;
 
 namespace Pokédex.Controllers
 {
@@ -6,7 +8,11 @@ namespace Pokédex.Controllers
 	{
 		public IActionResult Index()
 		{
-			return View();
+			using (PokedexContext db = new PokedexContext())
+			{
+				List<Pokemon> PokemonList = db.Pokemons.ToList<Pokemon>();
+                return View("Index", PokemonList);
+            }
 		}
 	}
 }
